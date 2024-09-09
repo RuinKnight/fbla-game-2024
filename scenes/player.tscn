@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjwc81m0ygg5y"]
+
+[ext_resource type="Script" path="res://scripts/player_movement.gd" id="1_akc1x"]
+[ext_resource type="Texture2D" uid="uid://cfmtl85c8u2is" path="res://art/test guy head.png" id="2_a5375"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vwr5g"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_04okt"]
+diffuse_texture = ExtResource("2_a5375")
+texture_filter = 1
+
+[node name="Player" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_akc1x")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_vwr5g")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+scale = Vector2(4, 4)
+texture = SubResource("CanvasTexture_04okt")
