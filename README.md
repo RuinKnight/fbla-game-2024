@@ -13,8 +13,10 @@ This is a game for FBLA's Video Game Challenge Presentation Event.
 3. Open the terminal (on windows: press the windows key then type in "terminal")
 4. Configure your username and email with the following commands:
 ```shell
-$ git config --global user.name "your name"
-$ git config --global user.email your@email.com
+git config --global user.name "your name"
+```
+```shell
+git config --global user.email your@email.com
 ```
 #### Setup a PAT
 1. In Github, click on your account icon and click on settings.
@@ -27,17 +29,21 @@ $ git config --global user.email your@email.com
 8. Click "Generate Token"
 9. Copy the token to somewhere safe
 ### Project Setup
-1. Download the project at [https://github.com/bf-bonkus/fbla-game-2024/archive/refs/heads/master.zip](https://github.com/bf-bonkus/fbla-game-2024/archive/refs/heads/master.zip)
-2. Extract the .zip somewhere on your PC (ie: `C:\Users\(Your Name)\Documents\Godot\Projects)`)
-3. Launch Godot (I'd recommend pinning it to the taskbar)
-4. Select Import
-5. Go to where you extracted the project .zip
-6. Click "Open"
+1. Open Godot
+2. Click Create
+3. Name the project fbla-game-2024
+4. Set the path to something like `C:\Users\(Your Name)\Documents\Godot\Projects\fbla-game-2024`
+5. Click Create & Edit
+6. Once it's done loading, close godot.
+7. Download the godot-git plugin at [https://github.com/godotengine/godot-git-plugin/releases/tag/v3.1.1](https://github.com/godotengine/godot-git-plugin/releases/tag/v3.1.1)
+8. Extract the .zip
+9. Copy the addons folder into fbla-game-2024
 ### Godot-Git Setup
 1. In Godot, go to Project -> Version Control -> Version Control Settings
 2. In the "username" field, paste in your git username
 3. In the "password" field, paste in your PAT
-4. Select HTTPS
-5. Enable VCS
-6. Click close
-7. UNFINISHED
+4. Enable "Connect to VCS"
+5. Click apply
+6. Widen the "Inspector" tab until "Commit" is visible
+7. Click the three dots at the very bottom right and select "Create new Remote"
+8. Name it something like `fbla-game-2024` and set the remote url to `https://github.com/bf-bonkus/fbla-game-2024.git`
