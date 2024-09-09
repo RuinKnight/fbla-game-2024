@@ -6,7 +6,7 @@ This is a game for FBLA's Video Game Challenge Presentation Event.
 ### Prerequisites
 #### Install Godot
 1. Download Godot at [https://godotengine.org/download/](https://godotengine.org/download/)
-2. Extract the .zip somewhere on your PC (ie: `C:\\Users\(Your Name)\Documents\Godot`)
+2. Extract the .zip somewhere on your PC (ie: `C:\Users\(Your Name)\Documents\Godot`)
 #### Install Git
 1. Download Git at [https://git-scm.com/download/win](https://git-scm.com/download/win)
 2. Run the .exe and go through the setup wizard
@@ -28,7 +28,7 @@ $ git config --global user.email your@email.com
 9. Copy the token to somewhere safe
 ### Project Setup
 1. Download the project at [https://github.com/bf-bonkus/fbla-game-2024/archive/refs/heads/master.zip](https://github.com/bf-bonkus/fbla-game-2024/archive/refs/heads/master.zip)
-2. Extract the .zip somewhere on your PC (ie: `C:\\Users\(Your Name)\Documents\Godot\Projects)`)
+2. Extract the .zip somewhere on your PC (ie: `C:\Users\(Your Name)\Documents\Godot\Projects)`)
 3. Launch Godot (I'd recommend pinning it to the taskbar)
 4. Select Import
 5. Go to where you extracted the project .zip
