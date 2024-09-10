@@ -1,8 +1,7 @@
 # FBLA Game 2024
 ###### *title very WIP*
 This is a game for FBLA's Video Game Challenge Presentation Event.
-## Installation
-###### *guide WIP*
+## Installation - WIP DONT FOLLOW!!!
 ### Prerequisites
 #### Install Godot
 1. Download Godot at [https://godotengine.org/download/](https://godotengine.org/download/)
