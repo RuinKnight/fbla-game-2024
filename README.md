@@ -28,15 +28,15 @@ git config --global user.email your@email.com
 8. Click "Generate Token"
 9. Copy the token to somewhere safe
 ### Project Setup
-1. Open Godot
-2. Click Create
-3. Name the project fbla-game-2024
-4. Set the path to something like `C:\Users\(Your Name)\Documents\Godot\Projects\fbla-game-2024`
-5. Click Create & Edit
-6. Once it's done loading, close godot.
-7. Download the godot-git plugin at [https://github.com/godotengine/godot-git-plugin/releases/tag/v3.1.1](https://github.com/godotengine/godot-git-plugin/releases/tag/v3.1.1)
-8. Extract the .zip
-9. Copy the addons folder into fbla-game-2024
+1. Reopen the terminal (assuming you closed it)
+2. Go to the directory where you want to setup your project (on windows: cd Documents/godot/projects)
+3. run the commands below:
+```shell
+git clone https://github.com/bf-bonkus/fbla-game-2024.git
+```
+4. Open Godot and press Import
+5. Go to where you downloaded the project and double click on project.godot
+6. Press Import & Edit
 ### Godot-Git Setup
 1. In Godot, go to Project -> Version Control -> Version Control Settings
 2. In the "username" field, paste in your git username
@@ -45,4 +45,4 @@ git config --global user.email your@email.com
 5. Click apply
 6. Widen the "Inspector" tab until "Commit" is visible
 7. Click the three dots at the very bottom right and select "Create new Remote"
-8. Name it something like `fbla-game-2024` and set the remote url to `https://github.com/bf-bonkus/fbla-game-2024.git`
+8. Name it something like `origin` and set the remote url to `https://github.com/bf-bonkus/fbla-game-2024.git`
