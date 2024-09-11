@@ -1,7 +1,7 @@
 # FBLA Game 2024
 ###### *title very WIP*
 This is a game for FBLA's Video Game Challenge Presentation Event.
-## Installation - WIP DONT FOLLOW!!!
+## Installation - Works on my machine
 ### Prerequisites
 #### Install Godot
 1. Download Godot at [https://godotengine.org/download/](https://godotengine.org/download/)
@@ -44,5 +44,7 @@ git clone https://github.com/bf-bonkus/fbla-game-2024.git
 4. Enable "Connect to VCS"
 5. Click apply
 6. Widen the "Inspector" tab until "Commit" is visible
-7. Click the three dots at the very bottom right and select "Create new Remote"
-8. Name it something like `origin` and set the remote url to `https://github.com/bf-bonkus/fbla-game-2024.git`
+7. Press the "pull" button (should look like a downwards arrow)
+9. If you can't press the button, or if the bottom doesn't have something that says "origin":
+10. Click the three dots at the very bottom right and select "Create new Remote"
+11. Name it something like `origin` and set the remote url to `https://github.com/bf-bonkus/fbla-game-2024.git`
