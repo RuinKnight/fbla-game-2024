@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-@export var speed = 10000
+@export var speed = 8000
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:

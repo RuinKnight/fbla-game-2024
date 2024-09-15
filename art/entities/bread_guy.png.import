@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bedl5svbqy21m"
-path="res://.godot/imported/file_cabinet.png-250c11520b5450f4b96efeb591d10d57.ctex"
+uid="uid://sm5x6lbyfb1g"
+path="res://.godot/imported/bread_guy.png-e63e9c005e49c1cc56f872741bd54f63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/file_cabinet.png"
-dest_files=["res://.godot/imported/file_cabinet.png-250c11520b5450f4b96efeb591d10d57.ctex"]
+source_file="res://art/entities/bread_guy.png"
+dest_files=["res://.godot/imported/bread_guy.png-e63e9c005e49c1cc56f872741bd54f63.ctex"]
 
 [params]
 
