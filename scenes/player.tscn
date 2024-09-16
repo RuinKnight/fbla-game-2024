@@ -42,11 +42,11 @@ animations = [{
 "speed": 7.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 motion_mode = 1
 script = ExtResource("1_akc1x")
 
-[node name="Collision" type="CollisionShape2D" parent="."]
+[node name="Collision" type="CollisionShape2D" parent="." groups=["Player"]]
 position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_lbc38")
 
@@ -54,5 +54,3 @@ shape = SubResource("RectangleShape2D_lbc38")
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_68l8u")
 autoplay = "default"
-frame = 1
-frame_progress = 0.804339
