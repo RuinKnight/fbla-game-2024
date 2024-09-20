@@ -1,0 +1,7 @@
+class_name Dialogue
+
+
+class DialogueObject:
+  enum type = {OPTION, CONTINUE}
+  var text: string
+  var connect_to: array
