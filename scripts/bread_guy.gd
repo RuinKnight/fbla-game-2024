@@ -1,6 +1,7 @@
 extends Entity
 
+@export var word: Resource
 
 func _on_interactable_component_interacted() -> void:
-	print("Wow, such Dialogue")
+	print(word.text)
 	$Sprite.animation = "yap"

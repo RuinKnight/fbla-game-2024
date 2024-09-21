@@ -1,0 +1,7 @@
+[gd_resource type="Resource" load_steps=2 format=3 uid="uid://c8ftp2dmh1vkw"]
+
+[ext_resource type="Script" path="res://dialogue/dialogue_object.gd" id="1_8udbd"]
+
+[resource]
+script = ExtResource("1_8udbd")
+text = "Yahoo"
