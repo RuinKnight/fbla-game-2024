@@ -1,6 +1,6 @@
-extends Resource
+class_name Dialogue
+extends Node
 
-@export var text: String
-
-func _init(p_text = "Yummers"):
-	text = p_text
+class DialogueObject:
+	var text = ["yappuchino"]
+	var options: Array[Dictionary]

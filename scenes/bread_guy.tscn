@@ -1,7 +1,6 @@
-[gd_scene load_steps=14 format=3 uid="uid://6q208vjtos5h"]
+[gd_scene load_steps=13 format=3 uid="uid://6q208vjtos5h"]
 
 [ext_resource type="Script" path="res://scripts/bread_guy.gd" id="1_6ti48"]
-[ext_resource type="Resource" uid="uid://c8ftp2dmh1vkw" path="res://dialogue/bread_guy.tres" id="2_j2igk"]
 [ext_resource type="PackedScene" uid="uid://d3hwqwugl7t4m" path="res://components/interactable_component.tscn" id="2_t56tu"]
 [ext_resource type="Texture2D" uid="uid://sm5x6lbyfb1g" path="res://art/entities/bread_guy.png" id="3_07pyq"]
 [ext_resource type="Texture2D" uid="uid://b3wxa2x7h6kub" path="res://art/entities/bread_guy_speaking.png" id="4_nnoiq"]
@@ -66,7 +65,6 @@ animations = [{
 
 [node name="BreadGuy" type="Node2D"]
 script = ExtResource("1_6ti48")
-word = ExtResource("2_j2igk")
 
 [node name="InteractableComponent" parent="." instance=ExtResource("2_t56tu")]
 
