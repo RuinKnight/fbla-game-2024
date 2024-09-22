@@ -17,9 +17,31 @@ anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -248.0
+offset_top = -198.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 0
 
 [node name="Label" type="RichTextLabel" parent="TextBox"]
 layout_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="TextBox"]
+layout_mode = 2
+size_flags_horizontal = 8
+
+[node name="Button" type="Button" parent="TextBox/PanelContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Option_1"
+
+[node name="Button2" type="Button" parent="TextBox/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+text = "Option_2"
+
+[node name="Button3" type="Button" parent="TextBox/PanelContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 8
+text = "Option_3"
