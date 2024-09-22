@@ -1,51 +1,29 @@
-[gd_scene load_steps=13 format=3 uid="uid://dh8j0fs3m77p7"]
+[gd_scene load_steps=9 format=3 uid="uid://dh8j0fs3m77p7"]
 
 [ext_resource type="Script" path="res://scripts/bread_guy.gd" id="1_6ti48"]
 [ext_resource type="PackedScene" uid="uid://d3hwqwugl7t4m" path="res://components/interactable_component.tscn" id="2_t56tu"]
-[ext_resource type="Texture2D" uid="uid://sm5x6lbyfb1g" path="res://art/entities/bread_guy.png" id="3_07pyq"]
-[ext_resource type="Texture2D" uid="uid://b3wxa2x7h6kub" path="res://art/entities/bread_guy_speaking.png" id="4_nnoiq"]
+[ext_resource type="Texture2D" uid="uid://b57sem07mgup7" path="res://art/entities/fbi_operative.png" id="3_lywt5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cphoh"]
 radius = 100.0
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0f2h3"]
-atlas = ExtResource("3_07pyq")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2q6l3"]
+atlas = ExtResource("3_lywt5")
 region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_32ntx"]
-atlas = ExtResource("3_07pyq")
+[sub_resource type="AtlasTexture" id="AtlasTexture_2otw7"]
+atlas = ExtResource("3_lywt5")
 region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_75xjq"]
-atlas = ExtResource("3_07pyq")
-region = Rect2(32, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_n03ud"]
-atlas = ExtResource("3_07pyq")
-region = Rect2(48, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_crmeu"]
-atlas = ExtResource("4_nnoiq")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fft8g"]
-atlas = ExtResource("4_nnoiq")
+[sub_resource type="AtlasTexture" id="AtlasTexture_qgo32"]
+atlas = ExtResource("3_lywt5")
 region = Rect2(0, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_068qw"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0f2h3")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_32ntx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_75xjq")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_n03ud")
+"texture": SubResource("AtlasTexture_2q6l3")
 }],
 "loop": true,
 "name": &"idle",
@@ -53,10 +31,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_crmeu")
+"texture": SubResource("AtlasTexture_2otw7")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fft8g")
+"texture": SubResource("AtlasTexture_qgo32")
 }],
 "loop": true,
 "name": &"yap",
@@ -74,8 +52,7 @@ shape = SubResource("CircleShape2D_cphoh")
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_068qw")
-animation = &"idle"
+animation = &"yap"
 autoplay = "idle"
-frame_progress = 0.282108
 
 [connection signal="interacted" from="InteractableComponent" to="." method="_on_interactable_component_interacted"]
