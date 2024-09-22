@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bkx6jcx638x0m"]
+[gd_scene load_steps=4 format=3 uid="uid://bkx6jcx638x0m"]
 
 [ext_resource type="Script" path="res://dialogue/dialogue_ui.gd" id="1_jq46j"]
+[ext_resource type="Texture2D" uid="uid://cq1ecgisowg8q" path="res://art/dialogue_thumb/federal_bread.png" id="2_cbmgj"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkq64"]
 
 [node name="DialogueUI" type="Control"]
 layout_mode = 3
@@ -11,37 +14,73 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jq46j")
 
-[node name="TextBox" type="PanelContainer" parent="."]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -198.0
-offset_bottom = 2.0
+offset_top = -197.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Label" type="RichTextLabel" parent="TextBox"]
-layout_mode = 2
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 0
+offset_left = 263.0
+offset_top = -9.0
+offset_right = 466.0
+offset_bottom = 42.0
 
-[node name="PanelContainer" type="PanelContainer" parent="TextBox"]
+[node name="Label" type="Label" parent="Panel/Panel"]
+layout_mode = 1
+offset_right = 201.0
+offset_bottom = 50.0
+theme_override_font_sizes/font_size = 36
+text = "Mr. Breadly"
+
+[node name="Speech" type="RichTextLabel" parent="Panel"]
 layout_mode = 2
+offset_left = 262.0
+offset_top = 42.0
+offset_right = 909.0
+offset_bottom = 172.0
+theme_override_font_sizes/normal_font_size = 20
+text = "My favorite flavor of coffee is yappuchino. I don't even know why, it just feels right. Anyways, how is your investigation going?"
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 2
+offset_left = 40.0
+offset_top = -43.0
+offset_right = 240.0
+offset_bottom = 157.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+texture = ExtResource("2_cbmgj")
+expand_mode = 5
+
+[node name="Choices" type="PanelContainer" parent="Panel"]
+layout_mode = 2
+offset_left = 930.0
+offset_top = 14.0
+offset_right = 1130.0
+offset_bottom = 180.0
 size_flags_horizontal = 8
+theme_override_styles/panel = SubResource("StyleBoxEmpty_mkq64")
 
-[node name="Button" type="Button" parent="TextBox/PanelContainer"]
+[node name="Button" type="Button" parent="Panel/Choices"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 0
 text = "Option_1"
 
-[node name="Button2" type="Button" parent="TextBox/PanelContainer"]
+[node name="Button2" type="Button" parent="Panel/Choices"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-size_flags_horizontal = 0
 size_flags_vertical = 4
 text = "Option_2"
 
-[node name="Button3" type="Button" parent="TextBox/PanelContainer"]
+[node name="Button3" type="Button" parent="Panel/Choices"]
+custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
-size_flags_horizontal = 0
 size_flags_vertical = 8
 text = "Option_3"

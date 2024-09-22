@@ -9,6 +9,7 @@
 [node name="Office" parent="." instance=ExtResource("2_hoq0h")]
 
 [node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(576, 324)
 position_smoothing_enabled = true
 
 [node name="Player" parent="." instance=ExtResource("1_oqik1")]
