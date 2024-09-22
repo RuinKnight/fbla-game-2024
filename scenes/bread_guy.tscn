@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://6q208vjtos5h"]
+[gd_scene load_steps=13 format=3 uid="uid://dh8j0fs3m77p7"]
 
 [ext_resource type="Script" path="res://scripts/bread_guy.gd" id="1_6ti48"]
 [ext_resource type="PackedScene" uid="uid://d3hwqwugl7t4m" path="res://components/interactable_component.tscn" id="2_t56tu"]

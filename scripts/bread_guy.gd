@@ -6,5 +6,5 @@ func _ready() -> void:
 	word.text = ["Nerds","Yappuchino"]
 
 func _on_interactable_component_interacted() -> void:
-	print(word.text[1])
+	Dialogue.start_dialogue(word, 1)
 	$Sprite.animation = "yap"

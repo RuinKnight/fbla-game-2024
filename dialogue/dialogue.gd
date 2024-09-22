@@ -1,10 +1,12 @@
-class_name Dialogue
 extends Node
 
-signal dialogue_started
+signal set_dialogue(dialogue_object: DialogueObject, start_text: int)
 
-func start_dialogue():
-	dialogue_started.emit()
+
+func start_dialogue(dialogue_object: DialogueObject, start_text: int):
+	print("yap")
+	set_dialogue.emit(dialogue_object, start_text)
+
 
 class DialogueObject:
 	var text = ["yappuchino"]
