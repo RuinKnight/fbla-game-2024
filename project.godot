@@ -39,6 +39,10 @@ import/blender/enabled=false
 
 Player="The player, the whole player, and nothing but the player"
 
+[gui]
+
+theme/custom_font="res://art/SMW.Whole-Pixel.Spacing.otf"
+
 [input]
 
 move_up={
@@ -75,3 +79,5 @@ interact={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+textures/decals/filter=2
+textures/light_projectors/filter=2

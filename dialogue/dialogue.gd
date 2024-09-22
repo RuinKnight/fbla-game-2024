@@ -8,5 +8,7 @@ func start_dialogue(dialogue_object: DialogueObject, start_text: int):
 
 
 class DialogueObject:
-	var text = ["yappuchino"]
-	var options: Array[Dictionary]
+	var text
+	var options
+	var icon_path
+	var char_name
