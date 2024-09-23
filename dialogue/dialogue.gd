@@ -12,3 +12,4 @@ class DialogueObject:
 	var options
 	var icon_path
 	var char_name
+	var char_speed
