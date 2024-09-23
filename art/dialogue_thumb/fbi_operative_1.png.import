@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpkiiaco0tca1"
-path="res://.godot/imported/fbi_operative_static.png-ddca3259c386bee9ef7f2750ddb973ff.ctex"
+uid="uid://ctfsyslwpsnwp"
+path="res://.godot/imported/fbi_operative_1.png-7ac81aff32f24dffd93a2671b318b62c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/dialogue_thumb/fbi_operative_static.png"
-dest_files=["res://.godot/imported/fbi_operative_static.png-ddca3259c386bee9ef7f2750ddb973ff.ctex"]
+source_file="res://art/dialogue_thumb/fbi_operative_1.png"
+dest_files=["res://.godot/imported/fbi_operative_1.png-7ac81aff32f24dffd93a2671b318b62c.ctex"]
 
 [params]
 

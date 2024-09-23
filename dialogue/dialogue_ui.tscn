@@ -1,13 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkx6jcx638x0m"]
+[gd_scene load_steps=5 format=3 uid="uid://bkx6jcx638x0m"]
 
 [ext_resource type="Script" path="res://dialogue/dialogue_ui.gd" id="1_jq46j"]
+[ext_resource type="AudioStream" uid="uid://d8oewmms1bht" path="res://sound/speech_noise.wav" id="2_bbfgg"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_nr6ht"]
 font_size = 24
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkq64"]
 
-[node name="DialogueUI" type="Control"]
+[node name="DialogueUI" type="Control" node_paths=PackedStringArray("icon", "speech", "audio_player", "panel", "label", "options", "buttons")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -15,6 +16,13 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jq46j")
+icon = NodePath("Panel/Icon")
+speech = NodePath("Panel/Speech")
+audio_player = NodePath("AudioStreamPlayer")
+panel = NodePath("Panel")
+label = NodePath("Panel/Label")
+options = NodePath("Panel/Options")
+buttons = [NodePath("Panel/Options/Button1"), NodePath("Panel/Options/Button2"), NodePath("Panel/Options/Button3")]
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -54,7 +62,7 @@ size_flags_vertical = 4
 expand_mode = 5
 stretch_mode = 5
 
-[node name="Choices" type="PanelContainer" parent="Panel"]
+[node name="Options" type="PanelContainer" parent="Panel"]
 layout_mode = 2
 offset_left = 870.0
 offset_top = 8.0
@@ -63,26 +71,30 @@ offset_bottom = 189.0
 size_flags_horizontal = 8
 theme_override_styles/panel = SubResource("StyleBoxEmpty_mkq64")
 
-[node name="Button" type="Button" parent="Panel/Choices"]
+[node name="Button1" type="Button" parent="Panel/Options"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 0
-text = "L is real 2024"
 text_overrun_behavior = 3
 autowrap_mode = 3
 
-[node name="Button2" type="Button" parent="Panel/Choices"]
+[node name="Button2" type="Button" parent="Panel/Options"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 4
-text = "eh. Not terrible, but not great."
 text_overrun_behavior = 3
 autowrap_mode = 3
 
-[node name="Button3" type="Button" parent="Panel/Choices"]
+[node name="Button3" type="Button" parent="Panel/Options"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 8
-text = "Same ol', Same ol'"
 text_overrun_behavior = 3
 autowrap_mode = 3
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_bbfgg")
+
+[connection signal="pressed" from="Panel/Options/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Panel/Options/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Panel/Options/Button3" to="." method="_on_button_3_pressed"]

@@ -1,21 +1,13 @@
-[gd_scene load_steps=9 format=3 uid="uid://dh8j0fs3m77p7"]
+[gd_scene load_steps=7 format=3 uid="uid://dh8j0fs3m77p7"]
 
 [ext_resource type="Script" path="res://scripts/bread_guy.gd" id="1_6ti48"]
 [ext_resource type="PackedScene" uid="uid://d3hwqwugl7t4m" path="res://components/interactable_component.tscn" id="2_t56tu"]
 [ext_resource type="Texture2D" uid="uid://b57sem07mgup7" path="res://art/entities/fbi_operative.png" id="3_lywt5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cphoh"]
-radius = 100.0
+radius = 200.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2q6l3"]
-atlas = ExtResource("3_lywt5")
-region = Rect2(0, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_2otw7"]
-atlas = ExtResource("3_lywt5")
-region = Rect2(16, 0, 16, 16)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_qgo32"]
 atlas = ExtResource("3_lywt5")
 region = Rect2(0, 0, 16, 16)
 
@@ -27,17 +19,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"idle",
-"speed": 7.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_2otw7")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_qgo32")
-}],
-"loop": true,
-"name": &"yap",
 "speed": 7.0
 }]
 
