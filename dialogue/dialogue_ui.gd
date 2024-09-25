@@ -9,7 +9,8 @@ extends Control
 @export var options: PanelContainer
 @export var buttons: Array[Button]
 
-var working_dialogue
+var working_dialogue: Dialogue.DialogueObject
+var working_text: int
 
 func _ready() -> void:
 	Dialogue.set_dialogue.connect(_on_dialogue_set)
@@ -19,7 +20,8 @@ func _ready() -> void:
 
 func _on_dialogue_set(dialogue_object, start_text):
 	working_dialogue = dialogue_object
-	update_dialogue(working_dialogue, start_text)
+	working_text = start_text
+	update_dialogue()
 
 	panel.visible = true
 
@@ -28,15 +30,16 @@ func _on_dialogue_set(dialogue_object, start_text):
 
 	# Finishes everything
 	options.visible = true
+	action_select(0)
 
 
-func update_dialogue(dialogue_object, text):
+func update_dialogue():
 	# Set up all of the UI elements
-	label.text = dialogue_object.char_name
-	icon.texture = dialogue_object.icon
+	label.text = working_dialogue.char_name
+	icon.texture = working_dialogue.icon
 
 	# Set up options
-	var working_options = dialogue_object.item_array[text].options.keys()
+	var working_options = working_dialogue.item_array[working_text].options.keys()
 	var ii = 0
 	for i in buttons:
 		i.text = working_options[ii]
@@ -60,3 +63,8 @@ func speak(speech_text: String, speed: float):
 
 	if icon.texture is AnimatedTexture:
 		icon.texture.pause = true
+
+
+func action_select(button):
+	var selected_text = working_dialogue.item_array[working_text].options.keys()[button]
+	print(selected_text.to_string())

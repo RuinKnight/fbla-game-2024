@@ -24,7 +24,6 @@ var current_object = Dialogue.DialogueObject.new()
 		current_object.speech_noise = value
 @export_group("Dialogue Items")
 @export_multiline var text: Array[String]
-@export var options: Array[Dictionary]
 
 
 func _ready() -> void:
