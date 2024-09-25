@@ -17,26 +17,26 @@ func _ready() -> void:
 	panel.visible = false
 
 
-func _on_dialogue_set(dialogue_object, start_text, start_option):
+func _on_dialogue_set(dialogue_object, start_text):
 	working_dialogue = dialogue_object
-	update_dialogue(working_dialogue, start_text, start_option)
+	update_dialogue(working_dialogue, start_text)
 
 	panel.visible = true
 
 	# Animates the text, so it appears more smooth
-	await speak(working_dialogue.text[start_text], working_dialogue.char_speed)
+	await speak(working_dialogue.item_array[start_text].text, working_dialogue.char_base_speed)
 
 	# Finishes everything
 	options.visible = true
 
 
-func update_dialogue(dialogue_object, text, option):
+func update_dialogue(dialogue_object, text):
 	# Set up all of the UI elements
 	label.text = dialogue_object.char_name
-	icon.texture = load(dialogue_object.icon_path)
+	icon.texture = dialogue_object.icon
 
 	# Set up options
-	var working_options = dialogue_object.options[option].keys()
+	var working_options = dialogue_object.item_array[text].options.keys()
 	var ii = 0
 	for i in buttons:
 		i.text = working_options[ii]
