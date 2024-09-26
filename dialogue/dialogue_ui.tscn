@@ -8,7 +8,7 @@ font_size = 24
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkq64"]
 
-[node name="DialogueUI" type="Control" node_paths=PackedStringArray("icon", "speech", "audio_player", "panel", "label", "options", "buttons")]
+[node name="DialogueUI" type="Control" node_paths=PackedStringArray("icon", "speech", "audio_player", "panel", "label", "options", "button_array")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +22,7 @@ audio_player = NodePath("AudioStreamPlayer")
 panel = NodePath("Panel")
 label = NodePath("Panel/Label")
 options = NodePath("Panel/Options")
-buttons = [NodePath("Panel/Options/Button1"), NodePath("Panel/Options/Button2"), NodePath("Panel/Options/Button3")]
+button_array = [NodePath("Panel/Options/Button0"), NodePath("Panel/Options/Button1"), NodePath("Panel/Options/Button2")]
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 1
@@ -71,21 +71,21 @@ offset_bottom = 189.0
 size_flags_horizontal = 8
 theme_override_styles/panel = SubResource("StyleBoxEmpty_mkq64")
 
-[node name="Button1" type="Button" parent="Panel/Options"]
+[node name="Button0" type="Button" parent="Panel/Options"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 0
 text_overrun_behavior = 3
 autowrap_mode = 3
 
-[node name="Button2" type="Button" parent="Panel/Options"]
+[node name="Button1" type="Button" parent="Panel/Options"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 4
 text_overrun_behavior = 3
 autowrap_mode = 3
 
-[node name="Button3" type="Button" parent="Panel/Options"]
+[node name="Button2" type="Button" parent="Panel/Options"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 8
@@ -94,3 +94,7 @@ autowrap_mode = 3
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_bbfgg")
+
+[connection signal="pressed" from="Panel/Options/Button0" to="." method="action_select" binds= [0]]
+[connection signal="pressed" from="Panel/Options/Button1" to="." method="action_select" binds= [1]]
+[connection signal="pressed" from="Panel/Options/Button2" to="." method="action_select" binds= [2]]

@@ -18,14 +18,5 @@ class DialogueObject:
 
 class DialogueItem:
 	var text: String
-	var options: Array[int]
+	var options: Dictionary
 	var metadata: Dictionary
-
-
-class DialogueOptionGroup:
-	var dialogue_option_array = Array[DialogueOption]
-
-
-class DialogueOption:
-	var text: String
-	var connect: int

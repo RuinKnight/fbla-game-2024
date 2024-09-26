@@ -24,12 +24,13 @@ var current_object = Dialogue.DialogueObject.new()
 		current_object.speech_noise = value
 @export_group("Dialogue Items")
 @export_multiline var text: Array[String]
+@export var options: Array[Dictionary]
 
 
 func _ready() -> void:
 	var item_array_size = current_object.item_array.size()
 	for i in text.size():
-		var location = i + item_array_size
-		current_object.item_array.append(Dialogue.DialogueItem.new())
-		current_object.item_array[location].text = text[i]
-		current_object.item_array[location].options = options[i]
+		var working_item = Dialogue.DialogueItem.new()
+		working_item.text = text[i]
+		working_item.options = options[i]
+		current_object.item_array.append(working_item)
