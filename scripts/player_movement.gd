@@ -1,10 +1,16 @@
 extends CharacterBody2D
 
 @export var speed = 12000
-
+enum PlayerState {
+	LOCKED,
+	UNLOCKED,
+}
+var state = PlayerState.UNLOCKED
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
+	if state == PlayerState.LOCKED:
+		return
 	player_move(delta)
 	move_and_slide()
 

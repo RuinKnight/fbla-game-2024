@@ -9,27 +9,39 @@ extends Control
 @export var options: PanelContainer
 @export var button_array: Array[Button]
 
+enum DialogueState {
+	ACTIVE,
+	INACTIVE,
+}
+
 var working_dialogue: Dialogue.DialogueObject
 var working_text: int
+var state = DialogueState.INACTIVE:
+	set(value):
+		if state != value:
+			if value == DialogueState.ACTIVE:
+				panel.visible = true
+			else:
+				panel.visible = false
+		state = value
+
 
 func _ready() -> void:
-	Dialogue.set_dialogue.connect(_on_dialogue_set)
-	options.visible = false
+	Globals.set_dialogue.connect(set_dialogue)
 	panel.visible = false
 
-
-func _on_dialogue_set(dialogue_object, start_text):
+func set_dialogue(dialogue_object: Dialogue.DialogueObject, text: int):
 	working_dialogue = dialogue_object
-	working_text = start_text
+	working_text = text
+	label.text = working_dialogue.char_name
+	icon.texture = working_dialogue.icon
+	state = DialogueState.ACTIVE
 	update_dialogue()
 
 
 func update_dialogue():
 	options.visible = false
-	# Set up all of the UI elements
-	label.text = working_dialogue.char_name
-	icon.texture = working_dialogue.icon
-	panel.visible = true
+
 	# Animates the text, so it appears more smooth
 	await speak(working_dialogue.item_array[working_text].text, working_dialogue.char_base_speed)
 
@@ -39,8 +51,7 @@ func update_dialogue():
 		i.visible = false
 
 	if working_options.size() == 0:
-		$Panel.visible = false
-		return
+		state = DialogueState.INACTIVE
 
 	for i in working_options.size():
 		button_array[i].text = working_options[i]
@@ -68,8 +79,10 @@ func speak(speech_text: String, speed: float):
 
 
 func action_select(button: int):
+	if state != DialogueState.ACTIVE:
+		return
 	# Your guess is as good as mine.
 	working_text = (
 		working_dialogue.item_array[working_text].options[working_dialogue.item_array[working_text].options.keys()[button]]
-		)
+	)
 	update_dialogue()
