@@ -1,11 +1,6 @@
 extends Control
 
 @export_group("Node Paths")
-@export var speech: RichTextLabel
-@export var audio_player: AudioStreamPlayer
-@export var panel: Control
-@export var label: Label
-@export var options: Control
 @export var button_array: Array[Button]
 
 enum DialogueState {
@@ -19,26 +14,27 @@ var state = DialogueState.INACTIVE:
 	set(value):
 		if state != value:
 			if value == DialogueState.ACTIVE:
-				panel.visible = true
+				visible = true
 			else:
-				panel.visible = false
+				visible = false
+				Globals.camera_target_set.emit(null)
 		state = value
 
 
 func _ready() -> void:
 	Globals.set_dialogue.connect(set_dialogue)
-	panel.visible = false
+	visible = false
 
 func set_dialogue(dialogue_object: Dialogue.DialogueObject, text: int):
 	working_dialogue = dialogue_object
 	working_text = text
-	label.text = working_dialogue.char_name
+	%Label.text = working_dialogue.char_name
 	state = DialogueState.ACTIVE
 	update_dialogue()
 
 
 func update_dialogue():
-	options.visible = false
+	%Options.visible = false
 
 	# Animates the text, so it appears more smooth
 	await speak(working_dialogue.item_array[working_text].text, working_dialogue.char_base_speed)
@@ -54,19 +50,19 @@ func update_dialogue():
 	for i in working_options.size():
 		button_array[i].text = working_options[i]
 		button_array[i].visible = true
-	options.visible = true
+	%Options.visible = true
 
 
 func speak(speech_text: String, speed: float):
 	if speed == 0.0:
-		speech.text = speech_text
+		%Speech.text = speech_text
 		return
 
 	for i in (speech_text.length() + 1):
-		speech.text = speech_text.left(i)
+		%Speech.text = speech_text.left(i)
 		if i % 2 == 0:
-			audio_player.pitch_scale = randf_range(0.95,1.05)
-			audio_player.play()
+			%SpeechNoise.pitch_scale = randf_range(0.95,1.05)
+			%SpeechNoise.play()
 		await get_tree().create_timer(speed).timeout
 
 

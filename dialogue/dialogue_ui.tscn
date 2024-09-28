@@ -33,7 +33,7 @@ expand_margin_bottom = 8.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_nr6ht"]
 
-[node name="DialogueUI" type="Control" node_paths=PackedStringArray("speech", "audio_player", "panel", "label", "options", "button_array")]
+[node name="DialogueUI" type="Control" node_paths=PackedStringArray("button_array")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -41,39 +41,24 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jq46j")
-speech = NodePath("Panel/Panel/Speech")
-audio_player = NodePath("AudioStreamPlayer")
-panel = NodePath("Panel")
-label = NodePath("Panel/Panel/Label")
-options = NodePath("Panel/Options")
-button_array = [NodePath("Panel/Options/Button0"), NodePath("Panel/Options/Button1"), NodePath("Panel/Options/Button2")]
+button_array = [NodePath("Options/Button0"), NodePath("Options/Button1"), NodePath("Options/Button2")]
 
-[node name="Panel" type="Control" parent="."]
-layout_mode = 1
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_top = -256.0
-offset_bottom = -72.0
-grow_horizontal = 2
-grow_vertical = 0
-
-[node name="Panel" type="Panel" parent="Panel"]
+[node name="Panel" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 192.0
-offset_top = -184.0
+offset_top = -256.0
 offset_right = -192.0
-offset_bottom = 8.0
+offset_bottom = -64.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_styles/panel = SubResource("StyleBoxFlat_ngshh")
 
-[node name="Label" type="Label" parent="Panel/Panel"]
+[node name="Label" type="Label" parent="Panel"]
+unique_name_in_owner = true
 layout_mode = 1
 offset_left = 32.0
 offset_top = -24.0
@@ -82,7 +67,8 @@ offset_bottom = 9.0
 theme_override_styles/normal = SubResource("StyleBoxFlat_5lbfm")
 label_settings = SubResource("LabelSettings_nr6ht")
 
-[node name="Speech" type="RichTextLabel" parent="Panel/Panel"]
+[node name="Speech" type="RichTextLabel" parent="Panel"]
+unique_name_in_owner = true
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -98,46 +84,48 @@ grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 16
 scroll_active = false
 
-[node name="Options" type="BoxContainer" parent="Panel"]
+[node name="Options" type="BoxContainer" parent="."]
+unique_name_in_owner = true
 layout_mode = 2
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 offset_left = -184.0
-offset_top = -84.0
+offset_top = 76.0
 offset_right = -16.0
-offset_bottom = 98.0
+offset_bottom = 258.0
 grow_horizontal = 0
 grow_vertical = 2
 size_flags_horizontal = 8
 theme_override_constants/separation = 16
 vertical = true
 
-[node name="Button0" type="Button" parent="Panel/Options"]
+[node name="Button0" type="Button" parent="Options"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 0
 text_overrun_behavior = 3
 autowrap_mode = 3
 
-[node name="Button1" type="Button" parent="Panel/Options"]
+[node name="Button1" type="Button" parent="Options"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 4
 text_overrun_behavior = 3
 autowrap_mode = 3
 
-[node name="Button2" type="Button" parent="Panel/Options"]
+[node name="Button2" type="Button" parent="Options"]
 custom_minimum_size = Vector2(0, 50)
 layout_mode = 2
 size_flags_vertical = 8
 text_overrun_behavior = 3
 autowrap_mode = 3
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+[node name="SpeechNoise" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
 stream = ExtResource("2_bbfgg")
 
-[connection signal="pressed" from="Panel/Options/Button0" to="." method="action_select" binds= [0]]
-[connection signal="pressed" from="Panel/Options/Button1" to="." method="action_select" binds= [1]]
-[connection signal="pressed" from="Panel/Options/Button2" to="." method="action_select" binds= [2]]
+[connection signal="pressed" from="Options/Button0" to="." method="action_select" binds= [0]]
+[connection signal="pressed" from="Options/Button1" to="." method="action_select" binds= [1]]
+[connection signal="pressed" from="Options/Button2" to="." method="action_select" binds= [2]]
