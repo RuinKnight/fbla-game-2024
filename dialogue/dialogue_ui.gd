@@ -1,12 +1,11 @@
 extends Control
 
 @export_group("Node Paths")
-@export var icon: TextureRect
 @export var speech: RichTextLabel
 @export var audio_player: AudioStreamPlayer
-@export var panel: Panel
+@export var panel: Control
 @export var label: Label
-@export var options: PanelContainer
+@export var options: Control
 @export var button_array: Array[Button]
 
 enum DialogueState {
@@ -34,7 +33,6 @@ func set_dialogue(dialogue_object: Dialogue.DialogueObject, text: int):
 	working_dialogue = dialogue_object
 	working_text = text
 	label.text = working_dialogue.char_name
-	icon.texture = working_dialogue.icon
 	state = DialogueState.ACTIVE
 	update_dialogue()
 
@@ -64,18 +62,12 @@ func speak(speech_text: String, speed: float):
 		speech.text = speech_text
 		return
 
-	if icon.texture is AnimatedTexture:
-		icon.texture.pause = false
-
 	for i in (speech_text.length() + 1):
 		speech.text = speech_text.left(i)
 		if i % 2 == 0:
 			audio_player.pitch_scale = randf_range(0.95,1.05)
 			audio_player.play()
 		await get_tree().create_timer(speed).timeout
-
-	if icon.texture is AnimatedTexture:
-		icon.texture.pause = true
 
 
 func action_select(button: int):

@@ -1,14 +1,39 @@
-[gd_scene load_steps=5 format=3 uid="uid://bkx6jcx638x0m"]
+[gd_scene load_steps=6 format=3 uid="uid://bkx6jcx638x0m"]
 
 [ext_resource type="Script" path="res://dialogue/dialogue_ui.gd" id="1_jq46j"]
 [ext_resource type="AudioStream" uid="uid://d8oewmms1bht" path="res://sound/speech_noise.wav" id="2_bbfgg"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngshh"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.8, 0.8, 0.8, 0.501961)
+corner_radius_top_left = 32
+corner_radius_top_right = 32
+corner_radius_bottom_right = 32
+corner_radius_bottom_left = 32
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lbfm"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 1, 1, 0.501961)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+expand_margin_left = 8.0
+expand_margin_top = 8.0
+expand_margin_right = 8.0
+expand_margin_bottom = 8.0
+
 [sub_resource type="LabelSettings" id="LabelSettings_nr6ht"]
-font_size = 24
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkq64"]
-
-[node name="DialogueUI" type="Control" node_paths=PackedStringArray("icon", "speech", "audio_player", "panel", "label", "options", "button_array")]
+[node name="DialogueUI" type="Control" node_paths=PackedStringArray("speech", "audio_player", "panel", "label", "options", "button_array")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -16,60 +41,78 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_jq46j")
-icon = NodePath("Panel/Icon")
-speech = NodePath("Panel/Speech")
+speech = NodePath("Panel/Panel/Speech")
 audio_player = NodePath("AudioStreamPlayer")
 panel = NodePath("Panel")
-label = NodePath("Panel/Label")
+label = NodePath("Panel/Panel/Label")
 options = NodePath("Panel/Options")
 button_array = [NodePath("Panel/Options/Button0"), NodePath("Panel/Options/Button1"), NodePath("Panel/Options/Button2")]
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Control" parent="."]
 layout_mode = 1
 anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -197.0
+offset_top = -256.0
+offset_bottom = -72.0
 grow_horizontal = 2
 grow_vertical = 0
 
-[node name="Label" type="Label" parent="Panel"]
-layout_mode = 2
-offset_left = 263.0
-offset_top = 4.0
-offset_right = 463.0
-offset_bottom = 42.0
+[node name="Panel" type="Panel" parent="Panel"]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 192.0
+offset_top = -184.0
+offset_right = -192.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_ngshh")
+
+[node name="Label" type="Label" parent="Panel/Panel"]
+layout_mode = 1
+offset_left = 32.0
+offset_top = -24.0
+offset_right = 192.0
+offset_bottom = 9.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5lbfm")
 label_settings = SubResource("LabelSettings_nr6ht")
 
-[node name="Speech" type="RichTextLabel" parent="Panel"]
-layout_mode = 2
-offset_left = 262.0
-offset_top = 42.0
-offset_right = 862.0
-offset_bottom = 178.0
+[node name="Speech" type="RichTextLabel" parent="Panel/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -292.0
+offset_top = -40.0
+offset_right = 292.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 2
 theme_override_font_sizes/normal_font_size = 16
 scroll_active = false
 
-[node name="Icon" type="TextureRect" parent="Panel"]
+[node name="Options" type="BoxContainer" parent="Panel"]
 layout_mode = 2
-offset_left = 40.0
-offset_top = -43.0
-offset_right = 240.0
-offset_bottom = 157.0
-size_flags_horizontal = 0
-size_flags_vertical = 4
-expand_mode = 5
-stretch_mode = 5
-
-[node name="Options" type="PanelContainer" parent="Panel"]
-layout_mode = 2
-offset_left = 870.0
-offset_top = 8.0
-offset_right = 1130.0
-offset_bottom = 189.0
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -184.0
+offset_top = -84.0
+offset_right = -16.0
+offset_bottom = 98.0
+grow_horizontal = 0
+grow_vertical = 2
 size_flags_horizontal = 8
-theme_override_styles/panel = SubResource("StyleBoxEmpty_mkq64")
+theme_override_constants/separation = 16
+vertical = true
 
 [node name="Button0" type="Button" parent="Panel/Options"]
 custom_minimum_size = Vector2(0, 50)
