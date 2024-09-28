@@ -1,29 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://dxm08gvmj5a8y"]
+[gd_scene load_steps=6 format=3 uid="uid://dxm08gvmj5a8y"]
 
+[ext_resource type="Script" path="res://scripts/main.gd" id="1_fut5k"]
 [ext_resource type="PackedScene" uid="uid://bjwc81m0ygg5y" path="res://scenes/player.tscn" id="1_oqik1"]
 [ext_resource type="PackedScene" uid="uid://dpjl18s08k7tj" path="res://scenes/office.tscn" id="2_hoq0h"]
+[ext_resource type="PackedScene" uid="uid://cowxj3leui7ms" path="res://scenes/game_camera.tscn" id="3_0br8b"]
 [ext_resource type="PackedScene" uid="uid://bkx6jcx638x0m" path="res://dialogue/dialogue_ui.tscn" id="3_7fnm8"]
 
-[node name="Main" type="Node2D"]
+[node name="Main" type="Node2D" node_paths=PackedStringArray("player_node")]
+script = ExtResource("1_fut5k")
+player_node = NodePath("Player")
 
 [node name="Office" parent="." instance=ExtResource("2_hoq0h")]
 
-[node name="Player" parent="." instance=ExtResource("1_oqik1")]
+[node name="Camera2D" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_0br8b")]
 position = Vector2(576, 320)
+player = NodePath("../Player")
 
-[node name="Camera2D" type="Camera2D" parent="Player"]
-limit_left = 0
-limit_top = 0
-limit_smoothed = true
-position_smoothing_enabled = true
-drag_horizontal_enabled = true
-drag_vertical_enabled = true
-drag_left_margin = 0.25
-drag_top_margin = 0.25
-drag_right_margin = 0.25
-drag_bottom_margin = 0.25
-editor_draw_limits = true
-editor_draw_drag_margin = true
+[node name="Player" parent="." instance=ExtResource("1_oqik1")]
+unique_name_in_owner = true
+position = Vector2(576, 320)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

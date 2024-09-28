@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=3 uid="uid://cowxj3leui7ms"]
+
+[ext_resource type="Script" path="res://scripts/game_camera.gd" id="1_6yc4u"]
+
+[node name="GameCamera" type="Camera2D"]
+limit_smoothed = true
+position_smoothing_enabled = true
+drag_horizontal_enabled = true
+drag_vertical_enabled = true
+drag_left_margin = 0.25
+drag_top_margin = 0.25
+drag_right_margin = 0.25
+drag_bottom_margin = 0.25
+editor_draw_limits = true
+editor_draw_drag_margin = true
+script = ExtResource("1_6yc4u")
