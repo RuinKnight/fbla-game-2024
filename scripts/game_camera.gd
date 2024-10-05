@@ -15,14 +15,16 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if state == CameraState.PLAYER_CAM:
-		target_pos = player.global_position
+		target_pos = player.global_position + 0.2 * (get_viewport().get_mouse_position() - Vector2(576, 324))
+	elif state == CameraState.ENITIY_CAM:
+		return
 	position = target_pos
 
 func _on_camera_target_set(targeted):
 	if targeted:
 		state = CameraState.ENITIY_CAM
 		target_pos = targeted
-		zoom = Vector2(3,3)
+		zoom = Vector2(2,2)
 	else:
 		state = CameraState.PLAYER_CAM
 		zoom = Vector2(1,1)

@@ -38,17 +38,21 @@ character_name = "Mr. Breadly (isn't deadly)"
 icon = ExtResource("4_ha11t")
 character_base_speed = 0.04
 speech_noise = ExtResource("5_4ddf5")
-text = Array[String](["Oi! Breadicus!", "The lunch room is giving out free yappuchinos!", ""])
+text = Array[String](["Oi! Breadicus!", "The lunch room is giving out free yappuchinos!", "", "Anti-you."])
 options = Array[Dictionary]([{
 "What?": 1
 }, {
+"ANTI-WOW": 3,
 "wow": 2
-}, {}])
+}, {}, {
+"sorry": 0
+}])
 
 [node name="Sprite" type="AnimatedSprite2D" parent="."]
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_068qw")
 animation = &"idle"
 autoplay = "idle"
+frame_progress = 0.692625
 
 [connection signal="interacted" from="InteractableComponent" to="." method="_on_interactable_component_interacted"]
