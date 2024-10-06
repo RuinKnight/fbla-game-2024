@@ -25,15 +25,14 @@ unique_name_in_owner = true
 position = Vector2(576, 320)
 
 [node name="GameCamera" parent="." instance=ExtResource("3_0br8b")]
-physics_interpolation_mode = 2
+physics_interpolation_mode = 1
 position = Vector2(576, 320)
 
-[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target", "follow_targets")]
+[node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 position = Vector2(576, 320)
 script = ExtResource("6_layj4")
-follow_mode = 3
+follow_mode = 2
 follow_target = NodePath("../Player")
-follow_targets = [NodePath("../Player")]
 tween_resource = SubResource("Resource_5iogq")
 follow_damping = true
 

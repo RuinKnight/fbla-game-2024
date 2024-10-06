@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=4 uid="uid://dpjl18s08k7tj"]
+[gd_scene load_steps=9 format=4 uid="uid://dpjl18s08k7tj"]
 
 [ext_resource type="Texture2D" uid="uid://ctwe7x70k4pr6" path="res://art/tiles/floor/corporate_carpet.png" id="1_c6qm5"]
 [ext_resource type="Texture2D" uid="uid://bd606843oxuqq" path="res://art/tiles/collide/file_cabinet.png" id="2_rrc6b"]
 [ext_resource type="PackedScene" uid="uid://dh8j0fs3m77p7" path="res://scenes/bread_guy.tscn" id="3_gcuuo"]
+[ext_resource type="AudioStream" uid="uid://dc17otfkwles4" path="res://sound/music/area_one_theme.wav" id="4_eqw7o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cd0p4"]
 texture = ExtResource("1_c6qm5")
@@ -40,3 +41,7 @@ tile_set = SubResource("TileSet_bj3oe")
 
 [node name="BreadGuy" parent="." instance=ExtResource("3_gcuuo")]
 position = Vector2(517, 100)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_eqw7o")
+autoplay = true

@@ -216,7 +216,7 @@ func _enter_tree() -> void:
 		else:
 			_is_2D = false
 			camera_3d = parent
-			
+
 			## Clears existing resource on Camera3D to prevent potentially messing with external Attribute resource
 			if camera_3d.attributes != null and not Engine.is_editor_hint():
 				camera_3d.attributes = null

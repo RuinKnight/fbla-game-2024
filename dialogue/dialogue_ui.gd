@@ -61,7 +61,7 @@ func speak(speech_text: String, speed: float):
 	for i in (speech_text.length() + 1):
 		%Speech.text = speech_text.left(i)
 		if i % 2 == 0:
-			%SpeechNoise.pitch_scale = randf_range(0.95,1.05)
+			%SpeechNoise.pitch_scale = randf_range(0.4,0.6)
 			%SpeechNoise.play()
 		await get_tree().create_timer(speed).timeout
 
