@@ -7,11 +7,6 @@ var current_object = Dialogue.DialogueObject.new()
 		return current_object.char_name
 	set(value):
 		current_object.char_name = value
-@export var icon: Texture:
-	get:
-		return current_object.icon
-	set(value):
-		current_object.icon = value
 @export var character_base_speed: float:
 	get:
 		return current_object.char_base_speed

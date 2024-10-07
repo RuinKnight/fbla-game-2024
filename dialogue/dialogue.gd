@@ -3,7 +3,6 @@ extends Node
 class_name Dialogue
 
 class DialogueObject:
-	var icon: Texture
 	var char_name: String
 	var char_base_speed: float
 	var speech_noise: AudioStream

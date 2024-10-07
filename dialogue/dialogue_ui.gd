@@ -28,12 +28,16 @@ func _ready() -> void:
 func set_dialogue(dialogue_object: Dialogue.DialogueObject, text: int):
 	working_dialogue = dialogue_object
 	working_text = text
-	%Label.text = working_dialogue.char_name
-	state = DialogueState.ACTIVE
 	update_dialogue()
 
 
 func update_dialogue():
+	if not working_dialogue:
+		return
+	if not working_dialogue.item_array.size():
+		return
+	%Label.text = working_dialogue.char_name
+	state = DialogueState.ACTIVE
 	%Options.visible = false
 
 	# Animates the text, so it appears more smooth
@@ -60,9 +64,8 @@ func speak(speech_text: String, speed: float):
 
 	for i in (speech_text.length() + 1):
 		%Speech.text = speech_text.left(i)
-		if i % 2 == 0:
-			%SpeechNoise.pitch_scale = randf_range(0.4,0.6)
-			%SpeechNoise.play()
+		%SpeechNoise.pitch_scale = randf_range(0.75,1.25)
+		%SpeechNoise.play()
 		await get_tree().create_timer(speed).timeout
 
 
