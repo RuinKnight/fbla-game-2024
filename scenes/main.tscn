@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scripts/main.gd" id="1_fut5k"]
 [ext_resource type="PackedScene" uid="uid://bjwc81m0ygg5y" path="res://scenes/player.tscn" id="1_oqik1"]
 [ext_resource type="PackedScene" uid="uid://dpjl18s08k7tj" path="res://scenes/office.tscn" id="2_hoq0h"]
-[ext_resource type="PackedScene" uid="uid://cowxj3leui7ms" path="res://scenes/game_camera.tscn" id="3_0br8b"]
+[ext_resource type="PackedScene" path="res://scenes/game_camera.tscn" id="3_0br8b"]
 [ext_resource type="PackedScene" uid="uid://bkx6jcx638x0m" path="res://dialogue/dialogue_ui.tscn" id="3_7fnm8"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="6_layj4"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_wnhng"]

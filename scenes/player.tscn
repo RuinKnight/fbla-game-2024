@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://bjwc81m0ygg5y"]
+[gd_scene load_steps=11 format=3 uid="uid://bjwc81m0ygg5y"]
 
 [ext_resource type="Script" path="res://scripts/player_movement.gd" id="1_akc1x"]
 [ext_resource type="Texture2D" uid="uid://sm5x6lbyfb1g" path="res://art/entities/bread_guy.png" id="2_va8ia"]
+[ext_resource type="Script" path="res://scripts/player_interact.gd" id="3_dqapd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbc38"]
 size = Vector2(40, 20)
@@ -42,11 +43,14 @@ animations = [{
 "speed": 7.0
 }]
 
-[node name="Player" type="CharacterBody2D" groups=["Player"]]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6ngne"]
+size = Vector2(40, 40)
+
+[node name="Player" type="CharacterBody2D"]
 motion_mode = 1
 script = ExtResource("1_akc1x")
 
-[node name="Collision" type="CollisionShape2D" parent="." groups=["Player"]]
+[node name="Collision" type="CollisionShape2D" parent="."]
 position = Vector2(0, 10)
 shape = SubResource("RectangleShape2D_lbc38")
 
@@ -54,3 +58,11 @@ shape = SubResource("RectangleShape2D_lbc38")
 scale = Vector2(4, 4)
 sprite_frames = SubResource("SpriteFrames_68l8u")
 autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 2
+collision_mask = 8
+script = ExtResource("3_dqapd")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_6ngne")
