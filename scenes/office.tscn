@@ -58,21 +58,6 @@ options = Array[Dictionary]([{
 "Oh, yeah.": 1
 }, {}, {}])
 
-[node name="DeadlyBreadly" parent="Entities" node_paths=PackedStringArray("DialogueComponent") instance=ExtResource("3_gcuuo")]
-position = Vector2(639, 202)
-DialogueComponent = NodePath("DeadlyLog")
-
-[node name="DeadlyLog" parent="Entities/DeadlyBreadly" instance=ExtResource("4_8q6kr")]
-character_name = "Mr. Breadly (very deadly)"
-character_base_speed = 0.08
-speech_noise = ExtResource("6_r7ljp")
-text = Array[String](["BRING ON THE CHAOS! I LOVE DESTROYING UNIVERSES, AND YOURS IS NO EXCEPTION!", "AHAHAHAHAHAHHA", "TEEHEE"])
-options = Array[Dictionary]([{
-"yosh": 1,
-"yoshi": 2
-}, {}, {}])
-
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_eqw7o")
 volume_db = -2.0
-autoplay = true
