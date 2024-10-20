@@ -1,5 +1,6 @@
 extends CharacterBody2D
 
+# Speed in units/second
 @export var speed = 12000
 enum PlayerState {
 	LOCKED,
@@ -7,14 +8,17 @@ enum PlayerState {
 }
 var state = PlayerState.UNLOCKED
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _physics_process(delta: float) -> void:
-	if state == PlayerState.LOCKED:
-		return
+	# MOVE the player
 	player_move(delta)
 	move_and_slide()
 
 
 func player_move(delta: float) -> void:
+	# Return if the player is locked
+	if state == PlayerState.LOCKED:
+		return
+	# Get the direction the player is moving as a Vector2
 	var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	velocity = direction.normalized() * speed * delta

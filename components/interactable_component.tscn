@@ -3,6 +3,9 @@
 [ext_resource type="Script" path="res://components/interactable_component.gd" id="1_qs78y"]
 
 [node name="InteractableComponent" type="Area2D"]
+collision_layer = 8
+collision_mask = 0
+monitoring = false
 script = ExtResource("1_qs78y")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

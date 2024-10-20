@@ -58,6 +58,7 @@ options = Array[Dictionary]([{
 "Oh, yeah.": 1
 }, {}, {}])
 
+<<<<<<< HEAD
 [node name="DeadlyBreadly" parent="Entities" node_paths=PackedStringArray("DialogueComponent") instance=ExtResource("3_gcuuo")]
 position = Vector2(639, 202)
 DialogueComponent = NodePath("DeadlyLog")
@@ -72,7 +73,8 @@ options = Array[Dictionary]([{
 "yoshi": 2
 }, {}, {}])
 
+=======
+>>>>>>> a343e122351f11295494751382345eb3ae694ea8
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_eqw7o")
 volume_db = -2.0
-autoplay = true
