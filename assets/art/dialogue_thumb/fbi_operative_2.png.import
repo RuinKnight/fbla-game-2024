@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dvdwvil34qjvu"
-path="res://.godot/imported/fbi_operative_2.png-d8512e45108fd9e3c5a36e78a15edc9f.ctex"
+path="res://.godot/imported/fbi_operative_2.png-c0778c6c2c0d6f6c2c42fce9089f8c76.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/dialogue_thumb/fbi_operative_2.png"
-dest_files=["res://.godot/imported/fbi_operative_2.png-d8512e45108fd9e3c5a36e78a15edc9f.ctex"]
+source_file="res://assets/art/dialogue_thumb/fbi_operative_2.png"
+dest_files=["res://.godot/imported/fbi_operative_2.png-c0778c6c2c0d6f6c2c42fce9089f8c76.ctex"]
 
 [params]
 

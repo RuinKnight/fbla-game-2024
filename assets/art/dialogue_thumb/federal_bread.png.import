@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://sm5x6lbyfb1g"
-path="res://.godot/imported/bread_guy.png-e63e9c005e49c1cc56f872741bd54f63.ctex"
+uid="uid://cq1ecgisowg8q"
+path="res://.godot/imported/federal_bread.png-a1fd97a033e97cfd11014bf4e21f105b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/entities/bread_guy.png"
-dest_files=["res://.godot/imported/bread_guy.png-e63e9c005e49c1cc56f872741bd54f63.ctex"]
+source_file="res://assets/art/dialogue_thumb/federal_bread.png"
+dest_files=["res://.godot/imported/federal_bread.png-a1fd97a033e97cfd11014bf4e21f105b.ctex"]
 
 [params]
 

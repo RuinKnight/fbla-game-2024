@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bd606843oxuqq"
-path="res://.godot/imported/file_cabinet.png-a668478534583b54e854bede6ce9ca3e.ctex"
+uid="uid://ctwe7x70k4pr6"
+path="res://.godot/imported/corporate_carpet.png-70d6129f07a08614b76330d0e845ab74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/tiles/collide/file_cabinet.png"
-dest_files=["res://.godot/imported/file_cabinet.png-a668478534583b54e854bede6ce9ca3e.ctex"]
+source_file="res://assets/art/tiles/floor/corporate_carpet.png"
+dest_files=["res://.godot/imported/corporate_carpet.png-70d6129f07a08614b76330d0e845ab74.ctex"]
 
 [params]
 

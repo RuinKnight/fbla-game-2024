@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://d8oewmms1bht"
-path="res://.godot/imported/speech_noise.wav-7a73ec5315881a8429f3b966bf7251af.sample"
+path="res://.godot/imported/speech_noise.wav-bb9f4274c0131b208cc2f03ab9ccf19b.sample"
 
 [deps]
 
-source_file="res://sound/speech_noise.wav"
-dest_files=["res://.godot/imported/speech_noise.wav-7a73ec5315881a8429f3b966bf7251af.sample"]
+source_file="res://assets/sound/speech_noise.wav"
+dest_files=["res://.godot/imported/speech_noise.wav-bb9f4274c0131b208cc2f03ab9ccf19b.sample"]
 
 [params]
 

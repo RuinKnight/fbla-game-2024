@@ -1,9 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://dxm08gvmj5a8y"]
+[gd_scene load_steps=7 format=3 uid="uid://dxm08gvmj5a8y"]
 
 [ext_resource type="PackedScene" uid="uid://bjwc81m0ygg5y" path="res://scenes/player.tscn" id="1_oqik1"]
-[ext_resource type="PackedScene" uid="uid://dpjl18s08k7tj" path="res://scenes/office.tscn" id="2_hoq0h"]
-[ext_resource type="PackedScene" path="res://scenes/game_camera.tscn" id="3_0br8b"]
-[ext_resource type="PackedScene" uid="uid://bkx6jcx638x0m" path="res://dialogue/dialogue_ui.tscn" id="3_7fnm8"]
+[ext_resource type="PackedScene" uid="uid://cowxj3leui7ms" path="res://scenes/game_camera.tscn" id="3_0br8b"]
+[ext_resource type="PackedScene" uid="uid://bkx6jcx638x0m" path="res://systems/dialogue/dialogue_ui.tscn" id="3_7fnm8"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="6_layj4"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_wnhng"]
 
@@ -15,14 +14,12 @@ ease = 2
 
 [node name="Main" type="Node2D"]
 
-[node name="Office" parent="." instance=ExtResource("2_hoq0h")]
-
 [node name="Player" parent="." instance=ExtResource("1_oqik1")]
 unique_name_in_owner = true
 position = Vector2(576, 320)
 
 [node name="GameCamera" parent="." instance=ExtResource("3_0br8b")]
-physics_interpolation_mode = 2
+physics_interpolation_mode = 1
 position = Vector2(576, 320)
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]

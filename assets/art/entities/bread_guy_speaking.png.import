@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctfsyslwpsnwp"
-path="res://.godot/imported/fbi_operative_1.png-7ac81aff32f24dffd93a2671b318b62c.ctex"
+uid="uid://b3wxa2x7h6kub"
+path="res://.godot/imported/bread_guy_speaking.png-c839b375837412b4db73abd29ae5ce97.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/dialogue_thumb/fbi_operative_1.png"
-dest_files=["res://.godot/imported/fbi_operative_1.png-7ac81aff32f24dffd93a2671b318b62c.ctex"]
+source_file="res://assets/art/entities/bread_guy_speaking.png"
+dest_files=["res://.godot/imported/bread_guy_speaking.png-c839b375837412b4db73abd29ae5ce97.ctex"]
 
 [params]
 

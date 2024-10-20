@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctwe7x70k4pr6"
-path="res://.godot/imported/corporate_carpet.png-bf78ce66bf1838488dd262a01a67231c.ctex"
+uid="uid://sm5x6lbyfb1g"
+path="res://.godot/imported/bread_guy.png-9fff3d5e8cbfada3033975c6e7944b10.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://art/tiles/floor/corporate_carpet.png"
-dest_files=["res://.godot/imported/corporate_carpet.png-bf78ce66bf1838488dd262a01a67231c.ctex"]
+source_file="res://assets/art/entities/bread_guy.png"
+dest_files=["res://.godot/imported/bread_guy.png-9fff3d5e8cbfada3033975c6e7944b10.ctex"]
 
 [params]
 

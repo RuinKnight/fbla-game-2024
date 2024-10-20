@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://cgjfidrbs0dh7"
-path="res://.godot/imported/SMW.Whole-Pixel.Spacing.otf-7350a58d6d1210a4bfafeb37ae5f9592.fontdata"
+path="res://.godot/imported/SMW.Whole-Pixel.Spacing.otf-4cebe08da194b522ab3ac865991ba363.fontdata"
 
 [deps]
 
-source_file="res://art/SMW.Whole-Pixel.Spacing.otf"
-dest_files=["res://.godot/imported/SMW.Whole-Pixel.Spacing.otf-7350a58d6d1210a4bfafeb37ae5f9592.fontdata"]
+source_file="res://assets/art/SMW.Whole-Pixel.Spacing.otf"
+dest_files=["res://.godot/imported/SMW.Whole-Pixel.Spacing.otf-4cebe08da194b522ab3ac865991ba363.fontdata"]
 
 [params]
 

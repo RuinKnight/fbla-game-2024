@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=3 uid="uid://bjwc81m0ygg5y"]
 
 [ext_resource type="Script" path="res://scripts/player_movement.gd" id="1_akc1x"]
-[ext_resource type="Texture2D" uid="uid://sm5x6lbyfb1g" path="res://art/entities/bread_guy.png" id="2_va8ia"]
+[ext_resource type="Texture2D" uid="uid://sm5x6lbyfb1g" path="res://assets/art/entities/bread_guy.png" id="2_va8ia"]
 [ext_resource type="Script" path="res://scripts/player_interact.gd" id="3_dqapd"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lbc38"]

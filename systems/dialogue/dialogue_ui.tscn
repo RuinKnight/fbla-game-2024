@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bkx6jcx638x0m"]
 
-[ext_resource type="Script" path="res://dialogue/dialogue_ui.gd" id="1_jq46j"]
-[ext_resource type="AudioStream" uid="uid://d8oewmms1bht" path="res://sound/speech_noise.wav" id="2_bbfgg"]
+[ext_resource type="Script" path="res://systems/dialogue/dialogue_ui.gd" id="1_jq46j"]
+[ext_resource type="AudioStream" uid="uid://d8oewmms1bht" path="res://assets/sound/speech_noise.wav" id="2_bbfgg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngshh"]
 bg_color = Color(0, 0, 0, 1)
