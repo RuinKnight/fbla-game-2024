@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=4 format=3 uid="uid://qyhybf8px5pg"]
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://qyhybf8px5pg"]
 
 [ext_resource type="Texture2D" uid="uid://bd606843oxuqq" path="res://assets/art/tiles/collide/file_cabinet.png" id="1_nceky"]
+[ext_resource type="Texture2D" uid="uid://ccm1i5mu021kh" path="res://assets/art/tiles/collide/desk.png" id="2_yyqan"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ly0tg"]
 
@@ -11,7 +12,15 @@ texture = ExtResource("1_nceky")
 0:0/0/texture_origin = Vector2i(0, 8)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -24, 8, -24, 8, 8, -8, 8)
 
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3bd7g"]
+texture = ExtResource("2_yyqan")
+0:0/size_in_atlas = Vector2i(2, 1)
+0:0/0 = 0
+0:0/0/texture_origin = Vector2i(-8, 0)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 24, -8, 24, 8, -8, 8)
+
 [resource]
 physics_layer_0/collision_layer = 5
 physics_layer_0/physics_material = SubResource("PhysicsMaterial_ly0tg")
 sources/0 = SubResource("TileSetAtlasSource_4dn3f")
+sources/1 = SubResource("TileSetAtlasSource_3bd7g")

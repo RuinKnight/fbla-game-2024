@@ -1,10 +1,17 @@
-[gd_scene load_steps=6 format=3 uid="uid://dxm08gvmj5a8y"]
+[gd_scene load_steps=8 format=3 uid="uid://dxm08gvmj5a8y"]
 
 [ext_resource type="PackedScene" uid="uid://bjwc81m0ygg5y" path="res://scenes/player.tscn" id="1_oqik1"]
 [ext_resource type="PackedScene" uid="uid://7svnsqggnewj" path="res://scenes/levels/office.tscn" id="1_vc8ej"]
 [ext_resource type="PackedScene" uid="uid://cowxj3leui7ms" path="res://scenes/game_camera.tscn" id="3_0br8b"]
 [ext_resource type="PackedScene" uid="uid://bkx6jcx638x0m" path="res://systems/dialogue/dialogue_ui.tscn" id="3_7fnm8"]
 [ext_resource type="Script" path="res://addons/phantom_camera/scripts/phantom_camera/phantom_camera_2d.gd" id="6_layj4"]
+[ext_resource type="Script" path="res://addons/phantom_camera/scripts/resources/tween_resource.gd" id="7_wnhng"]
+
+[sub_resource type="Resource" id="Resource_tc8jo"]
+script = ExtResource("7_wnhng")
+duration = 1.0
+transition = 0
+ease = 2
 
 [node name="Main" type="Node2D"]
 
@@ -12,19 +19,20 @@
 
 [node name="GameCamera" parent="." instance=ExtResource("3_0br8b")]
 physics_interpolation_mode = 1
-position = Vector2(576, 320)
+position = Vector2(576, 300)
 process_callback = 0
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
-position = Vector2(576, 320)
+position = Vector2(576, 300)
 script = ExtResource("6_layj4")
 follow_mode = 2
 follow_target = NodePath("../Player")
+tween_resource = SubResource("Resource_tc8jo")
 follow_damping = true
 
 [node name="Player" parent="." instance=ExtResource("1_oqik1")]
 unique_name_in_owner = true
-position = Vector2(576, 320)
+position = Vector2(576, 300)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
