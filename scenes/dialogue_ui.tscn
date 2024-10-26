@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bkx6jcx638x0m"]
+[gd_scene load_steps=6 format=3 uid="uid://c6okmg0co3eoq"]
 
 [ext_resource type="Script" path="res://scripts/dialogue/dialogue_ui.gd" id="1_jq46j"]
 [ext_resource type="AudioStream" uid="uid://d8oewmms1bht" path="res://assets/sound/speech_noise.wav" id="2_bbfgg"]

@@ -20,6 +20,7 @@ var state = MrBreadlyState.IDLE:
 
 
 func _on_interactable_component_interacted() -> void:
+	print("bowow?")
 	# Make sure that there's a dialogue object to use.
 	if not DialogueComponent:
 		return

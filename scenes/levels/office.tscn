@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://c5x5oywpyov2g" path="res://assets/tilesets/office_tileset.tres" id="1_k1keh"]
 [ext_resource type="TileSet" uid="uid://qyhybf8px5pg" path="res://assets/tilesets/office_foreground.tres" id="2_2mb8l"]
 [ext_resource type="PackedScene" uid="uid://dh8j0fs3m77p7" path="res://scenes/bread_guy.tscn" id="3_6x8xe"]
-[ext_resource type="PackedScene" uid="uid://ci88gqwblkmmg" path="res://systems/dialogue/dialogue_component.tscn" id="4_786hp"]
+[ext_resource type="PackedScene" uid="uid://ci88gqwblkmmg" path="res://components/dialogue_component.tscn" id="4_786hp"]
 [ext_resource type="AudioStream" uid="uid://d8oewmms1bht" path="res://assets/sound/speech_noise.wav" id="5_03r3t"]
 
 [node name="Office" type="Node2D"]
@@ -23,7 +23,6 @@ tile_set = ExtResource("2_2mb8l")
 [node name="Entities" type="Node2D" parent="."]
 
 [node name="MrBreadly" parent="Entities" node_paths=PackedStringArray("DialogueComponent") instance=ExtResource("3_6x8xe")]
-position = Vector2(701, 215)
 DialogueComponent = NodePath("DialogueComponent")
 
 [node name="DialogueComponent" parent="Entities/MrBreadly" instance=ExtResource("4_786hp")]
