@@ -47,6 +47,7 @@ import/blender/enabled=false
 
 [gui]
 
+theme/custom="res://assets/theme.tres"
 theme/custom_font="res://assets/art/SMW.Whole-Pixel.Spacing.otf"
 
 [input]
