@@ -18,6 +18,7 @@ ease = 2
 [node name="Office" parent="." instance=ExtResource("1_vc8ej")]
 
 [node name="GameCamera" parent="." instance=ExtResource("3_0br8b")]
+physics_interpolation_mode = 1
 position = Vector2(576, 300)
 process_callback = 0
 

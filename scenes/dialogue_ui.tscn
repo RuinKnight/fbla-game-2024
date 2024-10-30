@@ -1,37 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://c6okmg0co3eoq"]
+[gd_scene load_steps=4 format=3 uid="uid://c6okmg0co3eoq"]
 
 [ext_resource type="Script" path="res://scripts/dialogue/dialogue_ui.gd" id="1_jq46j"]
 [ext_resource type="AudioStream" uid="uid://d8oewmms1bht" path="res://assets/sound/speech_noise.wav" id="2_bbfgg"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ngshh"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.8, 0.8, 0.8, 0.501961)
-corner_radius_top_left = 32
-corner_radius_top_right = 32
-corner_radius_bottom_right = 32
-corner_radius_bottom_left = 32
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lbfm"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(1, 1, 1, 0.501961)
-corner_radius_top_left = 8
-corner_radius_top_right = 8
-corner_radius_bottom_right = 8
-corner_radius_bottom_left = 8
-expand_margin_left = 8.0
-expand_margin_top = 8.0
-expand_margin_right = 8.0
-expand_margin_bottom = 8.0
-
 [sub_resource type="LabelSettings" id="LabelSettings_nr6ht"]
+font_size = 24
 
 [node name="DialogueUI" type="Control" node_paths=PackedStringArray("button_array")]
 layout_mode = 3
@@ -55,7 +28,6 @@ offset_right = -256.0
 offset_bottom = -64.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_styles/panel = SubResource("StyleBoxFlat_ngshh")
 
 [node name="Label" type="Label" parent="Panel"]
 unique_name_in_owner = true
@@ -64,7 +36,6 @@ offset_left = 32.0
 offset_top = -24.0
 offset_right = 192.0
 offset_bottom = 9.0
-theme_override_styles/normal = SubResource("StyleBoxFlat_5lbfm")
 label_settings = SubResource("LabelSettings_nr6ht")
 
 [node name="Speech" type="RichTextLabel" parent="Panel"]
