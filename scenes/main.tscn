@@ -28,7 +28,8 @@ position = Vector2(576, 300)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="DialogueUI" parent="CanvasLayer" instance=ExtResource("3_7fnm8")]
+[node name="DialogueUI" parent="CanvasLayer" node_paths=PackedStringArray("button_array") instance=ExtResource("3_7fnm8")]
+button_array = [NodePath("Options/Button0"), NodePath("Options/Button1"), NodePath("Options/Button2")]
 
 [node name="PhantomCamera2D" type="Node2D" parent="." node_paths=PackedStringArray("follow_target")]
 position = Vector2(576, 300)
