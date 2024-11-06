@@ -1,12 +1,13 @@
 [gd_resource type="TileSet" load_steps=3 format=3 uid="uid://c5x5oywpyov2g"]
 
-[ext_resource type="Texture2D" uid="uid://ctwe7x70k4pr6" path="res://assets/art/tiles/floor/corporate_carpet.png" id="1_lycfr"]
+[ext_resource type="Texture2D" uid="uid://t35xggekalx1" path="res://assets/art/tiles/floor/carpet.png" id="1_5c4lt"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4a2dc"]
-texture = ExtResource("1_lycfr")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8q6i3"]
+texture = ExtResource("1_5c4lt")
 0:0/0 = 0
 1:0/0 = 0
-2:0/0 = 0
+1:1/0 = 0
+0:1/0 = 0
 
 [resource]
-sources/0 = SubResource("TileSetAtlasSource_4a2dc")
+sources/1 = SubResource("TileSetAtlasSource_8q6i3")

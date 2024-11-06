@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://dh8j0fs3m77p7"]
 
 [ext_resource type="Script" path="res://scripts/bread_guy.gd" id="1_6ti48"]
-[ext_resource type="PackedScene" uid="uid://d3hwqwugl7t4m" path="res://systems/components/interactable_component.tscn" id="2_t56tu"]
+[ext_resource type="PackedScene" uid="uid://d3hwqwugl7t4m" path="res://components/interactable_component.tscn" id="2_t56tu"]
 [ext_resource type="Texture2D" uid="uid://b57sem07mgup7" path="res://assets/art/entities/fbi_operative.png" id="3_lywt5"]
 [ext_resource type="Texture2D" uid="uid://dvdwvil34qjvu" path="res://assets/art/dialogue_thumb/fbi_operative_2.png" id="4_llo0y"]
 [ext_resource type="Texture2D" uid="uid://ctfsyslwpsnwp" path="res://assets/art/dialogue_thumb/fbi_operative_1.png" id="5_j0ga0"]

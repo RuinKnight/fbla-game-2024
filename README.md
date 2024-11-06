@@ -1,5 +1,4 @@
-# FBLA Game 2024
-###### *title very WIP*
+# BREADIQUETTE
 This is a game for FBLA's Video Game Challenge Presentation Event.
 ## Installation
 ### Prerequisites

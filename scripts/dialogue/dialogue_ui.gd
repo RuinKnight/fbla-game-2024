@@ -17,8 +17,7 @@ var state = DialogueState.INACTIVE:
 				visible = true
 			else:
 				visible = false
-				Globals.camera_target_set.emit(null)
-		return
+		state = value
 
 
 func _ready() -> void:
